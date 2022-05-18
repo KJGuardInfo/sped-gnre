@@ -95,7 +95,7 @@ class LoteV2 extends Lote {
             $tipoGnre = $gnre->createElement('tipoGnre', '0');
             $valorGNRE = $gnre->createElement('valorGNRE', $gnreGuia->c10_valorTotal);
             $dataPagamento = $gnre->createElement('dataPagamento', $gnreGuia->c33_dataPagamento);
-            $identificadorGuia = $gnre->createElement('identificadorGuia', '1');
+            $identificadorGuia = $gnre->createElement('identificadorGuia', $gnreGuia->c42_identificadorGuia);
 
             $contribuinteEmitente = $gnre->createElement('contribuinteEmitente');
 
@@ -128,6 +128,7 @@ class LoteV2 extends Lote {
 
             $receita = $gnre->createElement('receita', $gnreGuia->c02_receita);
             $documentoOrigem = $gnre->createElement('documentoOrigem', $gnreGuia->c04_docOrigem);
+            $produto = $gnre->createElement('produto', $gnreGuia->c26_produto);
             $tipoDoc = $gnre->createAttribute('tipo');
             $tipoDoc->value = $gnreGuia->c28_tipoDocOrigem;
             $documentoOrigem->appendChild($tipoDoc);
@@ -175,10 +176,9 @@ class LoteV2 extends Lote {
             $contribuinteDestinatario->appendChild($razaoSocial);
             $contribuinteDestinatario->appendChild($municipio);
 
-
-
             $item->appendChild($receita);
             $item->appendChild($documentoOrigem);
+            $item->appendChild($produto);
             $item->appendChild($referencia);
             $item->appendChild($dataVencimento);
             $item->appendChild($valor11);
@@ -192,7 +192,6 @@ class LoteV2 extends Lote {
 
             $itensGNRE->appendChild($item);
 
-
             $dados->appendChild($ufFavorecida);
             $dados->appendChild($tipoGnre);
             $dados->appendChild($contribuinteEmitente);
@@ -200,9 +199,6 @@ class LoteV2 extends Lote {
             $dados->appendChild($valorGNRE);
             $dados->appendChild($dataPagamento);
             $dados->appendChild($identificadorGuia);
-
-
-
 
             $guia->appendChild($dados);
             $gnre->appendChild($loteGnre);
