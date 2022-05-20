@@ -149,7 +149,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="notop" colspan="2">
+                                <td class="notop" colspan="2" style="height:20px">
                                     <strong>Produto:</strong> {$guia->c26_produto}
                                 </td>
                             </tr>
@@ -238,12 +238,12 @@
                     </td>
                 </tr>
                 <tr>
-                    <td colspan="2" class="noborder" style="padding-left:140px;">
+                    <td colspan="2" class="noborder" style="padding-left:35px">
                         {$guia->retornoRepresentacaoNumerica}
                     </td>
                 </tr>
                 <tr>
-                    <td class="noborder" style="padding-left:90px;" >
+                    <td class="noborder">
                         <img src="data:image/jpeg;base64,{$barcode->getCodigoBarrasBase64()}"/>
                     </td>
                 </tr>

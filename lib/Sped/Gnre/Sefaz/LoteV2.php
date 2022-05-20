@@ -178,7 +178,9 @@ class LoteV2 extends Lote {
 
             $item->appendChild($receita);
             $item->appendChild($documentoOrigem);
-            $item->appendChild($produto);
+            if (!empty($gnreGuia->c26_produto)) {
+                $item->appendChild($produto);
+            }
             $item->appendChild($referencia);
             $item->appendChild($dataVencimento);
             $item->appendChild($valor11);

@@ -107,7 +107,6 @@ class Html
         $guiaViaInfo = array(
             1 => '1ª via Banco',
             2 => '2ª via Contrinuinte',
-            3 => '3ª via Contribuinte/Fisco'
         );
 
         $guias = $lote->getGuias();
