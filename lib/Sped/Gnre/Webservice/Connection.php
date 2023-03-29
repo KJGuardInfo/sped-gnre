@@ -60,7 +60,7 @@ class Connection
             CURLOPT_PORT => 443,
             CURLOPT_VERBOSE => 1,
             CURLOPT_HEADER => 1,
-            CURLOPT_SSLVERSION => 3,
+            CURLOPT_SSLVERSION => 6,
             CURLOPT_SSL_VERIFYHOST => 0,
             CURLOPT_SSL_VERIFYPEER => 0,
             CURLOPT_SSLCERT => $setup->getCertificatePemFile(),
